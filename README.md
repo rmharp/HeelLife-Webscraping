@@ -26,7 +26,7 @@ When running, the script will check if you have the following R packages install
 3. **Output**: The script will save the scraped data as a CSV file named 'UNC Contacts List.csv' in the same directory as the R file is stored on your computer.
 
 ## Important Notes
-- The script uses RSelenium to interact with web pages, so ensure you have a compatible web driver and browser. I'd recommend installing Firefox here[https://www.mozilla.org/en-US/firefox/new/] since it seems to work best with the package.
+- The script uses RSelenium to interact with web pages, so ensure you have a compatible web driver and browser. I'd recommend installing [Firefox](https://www.mozilla.org/en-US/firefox/new/) since it seems to work best with the package.
 - Ensure you have permission to access and scrape the data such as a current ONYEN login.
 
 ## Contributing
