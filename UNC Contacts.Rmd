@@ -6,14 +6,14 @@ date: "2023-08-13"
 
 ```{r setup, include=FALSE}
 if(!require(dplyr)) {install.packages("dplyr"); library(dplyr)}
-if(!require(tidyverse)) {install.packages("dplyr"); library(tidyverse)}
-if(!require(rvest)) {install.packages("dplyr"); library(rvest)}
-if(!require(RSelenium)) {install.packages("dplyr"); library(RSelenium)}
-if(!require(wdman)) {install.packages("dplyr"); library(wdman)}
-if(!require(netstat)) {install.packages("dplyr"); library(netstat)}
-if(!require(xml2)) {install.packages("dplyr"); library(xml2)}
-if(!require(webdriver)) {install.packages("dplyr"); library(webdriver)}
-if(!require(purrr)) {install.packages("dplyr"); library(purrr)}
+if(!require(tidyverse)) {install.packages("tidyverse"); library(tidyverse)}
+if(!require(rvest)) {install.packages("rvest"); library(rvest)}
+if(!require(RSelenium)) {install.packages("RSelenium"); library(RSelenium)}
+if(!require(wdman)) {install.packages("wdman"); library(wdman)}
+if(!require(netstat)) {install.packages("netstat"); library(netstat)}
+if(!require(xml2)) {install.packages("xml2"); library(xml2)}
+if(!require(webdriver)) {install.packages("webdriver"); library(webdriver)}
+if(!require(purrr)) {install.packages("purrr"); library(purrr)}
 
 # For Debugging Purposes
 #ChromeCommand <- chrome(retcommand = T, verbose = F, check = F)
@@ -42,7 +42,7 @@ signin_button$highlightElement()
 signin_button$clickElement()
 Sys.sleep(4)
 num_results <- 1040
-num_presses <- (1040-10)/10
+num_presses <- (num_results-10)/10
 for (k in 1:num_presses) {
   remDr$executeScript("window.scrollTo(0, document.body.scrollHeight);")
   load_more <- remDr$findElement(using = "css", "button")
